@@ -1,35 +1,40 @@
 The Global Dashboard
 ===
+_Last Edit: #001 by Hector Torres on 2020-08-16_
 
 ## Overview
 
-The Global Dashboard is an application intended to show, within specific stated constraints, 
-the state of the world at a glance.  
+The Global Dashboard is an application intended to show, within specific stated 
+constraints, the state of the world at a glance.  
 
-It does so by collecting political, economic, trade, and other types of data, so that they can be 
-compared across time (year-on-year) and space (country-to-country) in one place. 
+It does so by collecting political, economic, trade, and other types of data, so that 
+they can be compared across time (year-on-year) and space (country-to-country) in one 
+place. 
 
 ## Data
-The goal would be to have access to as many public domain data sources as possible, in order 
-to create a single integrated dashboard. The data would fall along the following types.
+The goal would be to have access to as many public domain data sources as possible, in 
+order to create a single integrated dashboard. The data would fall along the following 
+types.
 
-### 1. Geography
+### 1. Geographic Data
 Data relating to country and regional geography. Not actionable, but useful for geospatial 
-analysis and event mapping. 
+analysis, event mapping, and for layering the next two types of data onto maps.
+#### 1.1 Base Maps
 
-### 2. People, Government, and Society
-Data relating to population and population trends, government type and stability, and other 
-societal trendlines. 
+### 2. Political Data
+Data relating to population and population trends, government type and stability, and 
+other societal trendlines. 
 
-### 3. Economy
+### 3. Economic Data
 Basic national economic and financial data.
 
 #### 3.1 Trade Flows
 
 #### 3.2 Reserves
 ##### 3.2.1 Food Reserves
-Data on available reserves is taken from commodities which are actively traded on global markets, and 
-for which data is available on brokerage platforms such as TradingView or Interactive Brokers.
+Data on available reserves is taken from commodities which are actively traded on global 
+markets, and for which data is available on brokerage platforms such as TradingView or 
+Interactive Brokers.
 
 Examples from TradingView include:
 
@@ -69,8 +74,9 @@ Wheat Futures	|ZW1!
     * Aquifers
 * Rainfall patterns
 ##### 3.2.3 Energy Reserves
-Data on available reserves is taken from commodities which are actively traded on global markets, and 
-for which data is available on brokerage platforms such as TradingView or Interactive Brokers.
+Data on available reserves is taken from commodities which are actively traded on global 
+markets, and for which data is available on brokerage platforms such as TradingView or 
+Interactive Brokers.
 
 Examples from TradingView include:
 
@@ -90,8 +96,9 @@ RBOB Gasoline Futures	|RB1!
 * Geologic formations
 
 ##### 3.2.4 Commodity Reserves
-Data on available reserves is taken from commodities which are actively traded on global markets, and 
-for which data is available on brokerage platforms such as TradingView or Interactive Brokers.
+Data on available reserves is taken from commodities which are actively traded on global 
+markets, and for which data is available on brokerage platforms such as TradingView or 
+Interactive Brokers.
 
 Examples from TradingView include:
 
@@ -123,18 +130,15 @@ Silver Futures	|SI1!
 ##### 3.4.2 Water Intensity Rate
 ##### 3.4.3 Energy Usage
 
-## The Model
-Once data is collected, the dashboard can take selected data and synthesize it in order to 
-create risk scores, which can be updated using either new dashboard data or from other 
-real-time sources (such as an Event Detector).
-
 ## How It Works
 The Global Dashboard contains the following jobs, each correlating with a specific 
 part of dashboard creation process.
 
-
 ### 1. The Data Collector
-This job connects to a data source for each type of data required by the dashboard, downloads it, parses it, 
-then saves it to persistent storage for analysis and visualization.
+This job connects to a data source for each type of data required by the dashboard, 
+downloads it, parses it, then saves it to persistent storage for analysis and 
+visualization.
+
 ### 2. The Dashboard UI
-Shows detected data in a UI that allows the user to select, filter, and parse data by time and/or space.
+Shows detected data in a UI that allows the user to select, filter, and parse data by 
+time and/or space.
